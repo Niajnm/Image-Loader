@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 import com.google.gson.annotations.Expose
 
 class Success {
-    @SerializedName("token")
+    @SerializedName("status")
     @Expose
     var token: String? = null
 }

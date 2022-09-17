@@ -1,11 +1,11 @@
 package com.example.imageloader.Auth
+
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.e_itmedi.Login.LoginResponse
@@ -36,11 +36,11 @@ class LogInActivity : AppCompatActivity() {
             validationCheck()
             //                loginRequest.setEmail(textLoginmail.getText().toString());
 //                loginRequest.setPassword(textLoginpass.getText().toString());
-            logIn()
+           // logIn()
         }
     }
 
-    fun validationCheck() {
+    private fun validationCheck() {
         email = editTextEmailAddress_Login!!.text.toString()
         pass = editTextPassword_Login!!.text.toString()
         if (email!!.isEmpty()) {
@@ -85,8 +85,8 @@ class LogInActivity : AppCompatActivity() {
 
                     Toast.makeText(this@LogInActivity, "Success....1", Toast.LENGTH_SHORT).show()
                     if (code == 200) {
-                      //  startActivity(Intent(this@LogInActivity, CategoryActivity::class.java))
-                        finish()
+                      //  startActivity(Intent(this@com.example.imageloader.Auth.LogInActivity, CategoryActivity::class.java))
+                       // finish()
                     }
                 }
             }
@@ -101,7 +101,5 @@ class LogInActivity : AppCompatActivity() {
         })
     }
 
-    companion object {
-        private const val TAG = "LogInActivity"
-    }
+
 }
