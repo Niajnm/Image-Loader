@@ -1,6 +1,7 @@
 package com.example.imageloader.Auth
 import com.example.e_itmedi.Authentication.SignUp.ResponseData
 import com.example.e_itmedi.Login.LoginResponse
+import com.example.imageloader.Auth.Login.LoginRes
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -19,7 +20,7 @@ interface AccessTokenServiceInterface {
     @POST("/record/login")
     @FormUrlEncoded
     fun loginUser(
-        @Field("email") email: String?,
+        @Field("username") email: String?,
         @Field("password") password: String?
-    ): Call<LoginResponse?>?
+    ): Call<LoginRes?>?
 }
